@@ -1,12 +1,12 @@
 :root {
   color-scheme: light;
-  --bg: #f7f8fc;
-  --primary: #1d4ed8;
-  --primary-dark: #1e3a8a;
-  --secondary: #0f172a;
+  --bg: #f5f7f2;
+  --primary: #2d3e52;
+  --primary-dark: #1f2c3d;
+  --secondary: #1b2738;
   --card: #ffffff;
   --muted: #6b7280;
-  --accent: #f59e0b;
+  --accent: #a8cb33;
 }
 
 * {
@@ -23,7 +23,7 @@ body {
 }
 
 .hero {
-  background: linear-gradient(120deg, #e0e7ff, #fef3c7);
+  background: linear-gradient(120deg, #dbe5f0, #f0f5da);
   padding: 32px 8vw 80px;
 }
 
@@ -65,7 +65,7 @@ body {
 
 .cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.25);
+  box-shadow: 0 10px 20px rgba(45, 62, 82, 0.25);
 }
 
 .ghost {
@@ -150,7 +150,7 @@ body {
 }
 
 .section.alt {
-  background: #f1f5f9;
+  background: #eef2ea;
 }
 
 .section-title {
@@ -219,7 +219,7 @@ body {
 }
 
 .footer code {
-  color: #fbbf24;
+  color: #c9e26a;
 }
 
 @media (max-width: 860px) {
