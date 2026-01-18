@@ -7,6 +7,8 @@
   --card: #ffffff;
   --muted: #6b7280;
   --accent: #a8cb33;
+  --accent-light: #c3e075;
+  --accent-dark: #7aa21f;
 }
 
 * {
@@ -20,6 +22,10 @@ body {
   background: var(--bg);
   color: var(--secondary);
   line-height: 1.6;
+}
+
+h3{
+  color: var(--accent-dark);
 }
 
 .hero {
@@ -51,9 +57,12 @@ body {
   color: var(--secondary);
   font-weight: 500;
 }
+.nav-links a:hover {
+  color: var(--accent);
+}
 
 .cta {
-  background: var(--primary);
+  background: var(--accent);
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -66,16 +75,24 @@ body {
 .cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(45, 62, 82, 0.25);
+  background: var(--accent-light);
 }
 
 .ghost {
   background: transparent;
   color: var(--primary);
-  border: 1px solid var(--primary);
+  border: 1px solid var(--accent-dark);
   padding: 12px 20px;
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ghost:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(45, 62, 82, 0.25);
+  border-color: var(--accent);
 }
 
 .hero-content {
