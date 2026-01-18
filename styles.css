@@ -3,12 +3,15 @@
   --bg: #f5f7f2;
   --primary: #2d3e52;
   --primary-dark: #1f2c3d;
+  --primary-opaced: rgba(45, 62, 82, 0.8);
   --secondary: #1b2738;
   --card: #ffffff;
+  --card-opaced: rgba(255, 255, 255, 0.8);
   --muted: #6b7280;
   --accent: #a8cb33;
   --accent-light: #c3e075;
   --accent-dark: #7aa21f;
+  --accent-opaced: rgba(168, 203, 51, 0.6);
 }
 
 * {
@@ -28,9 +31,19 @@ h3{
   color: var(--accent-dark);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
 .hero {
-  background: linear-gradient(120deg, #dbe5f0, #f0f5da);
+  background-image: linear-gradient(120deg, rgba(219, 229, 240, 0.5), rgba(240, 245, 218, 0.5)), url("bg.png");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-attachment: scroll, fixed;
   padding: 32px 8vw 80px;
+  position: relative;
 }
 
 .nav {
@@ -59,6 +72,26 @@ h3{
 }
 .nav-links a:hover {
   color: var(--accent);
+}
+
+.ghost-hero{
+  background: var(--primary-opaced);
+  color: var(--accent-dark);
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+}
+
+.ghost-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(45, 62, 82, 0.25);
+}
+
+.hero-text {
+  color: var(--accent-dark);
 }
 
 .cta {
@@ -142,7 +175,7 @@ h3{
 }
 
 .hero-card {
-  background: var(--card);
+  background: var(--card-opaced);
   padding: 32px;
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
